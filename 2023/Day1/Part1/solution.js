@@ -10,17 +10,8 @@ const rl = readline.createInterface({
 
 let total = 0
 rl.on('line', (line) => {
-    let firstNumber = null
-    let lastNumber = null
-    line.split("").forEach((char, i) => {
-        if (!isNaN(char)) {
-            if (!firstNumber) {
-                firstNumber = char
-            }
-            lastNumber = char
-        }
-    })
-    total += parseInt(firstNumber + lastNumber)
+    let numbers = line.split("").filter((char) => !isNaN(char))
+    total += parseInt(numbers[0] + numbers[numbers.length - 1])
 })
 
 rl.on('close', () => {

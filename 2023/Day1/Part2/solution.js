@@ -30,34 +30,18 @@ let total = 0
 rl.on('line', (line) => {
     const lineMatches = []
 
-    let firstDigit = null
-    let lastDigit = null
-    
     regexPatterns.forEach((pattern, index) => {let match
         while ((match = pattern.exec(line)) !== null) {
             const matchInfo = {
-                number: match[0],
+                number: isNaN(match[0]) ? speltNumbers.get(match[0]) : match[0],
                 position: match.index
             }
             lineMatches.push(matchInfo)
         }
     })
 
-    lineMatches.sort((a, b) => a.position - b.position).forEach((match, i) => {
-        let digit = match.number
-        if (speltNumbers.has(match.number)) {
-            digit = speltNumbers.get(match.number)
-        }
-
-        if (!firstDigit) {
-            firstDigit = digit
-        }
-        lastDigit = digit
-    })
-
-    if (!isNaN(firstDigit) && !isNaN(firstDigit)) {
-        total += parseInt(firstDigit + lastDigit)
-    }
+    let sorted = lineMatches.sort((a, b) => a.position - b.position)
+    total += parseInt(sorted[0].number + sorted[sorted.length - 1].number)
 })
 
 rl.on('close', () => {
