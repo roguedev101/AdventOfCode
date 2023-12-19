@@ -8,13 +8,13 @@ Welcome to my Advent of Code 2023 Challenge Tracker! This repository serves as a
 
 ## Challenges
 
-- [Day 1: Trebuchet?!](./Day1)
-- [Day 2: Cube Conundrum](./Day2)
-- [Day 3: Gear Ratios](./Day3)
-- [Day 4: Scratchcards](./Day4)
-- [Day 5: If You Give A Seed A Fertilizer](./Day5)
-- [Day 6: Wait For It](./Day6)
-- [Day 7: Camel Cards](./Day7) - WIP
+- [Day 1: Trebuchet?!](./2023/Day1)
+- [Day 2: Cube Conundrum](./2023/Day2)
+- [Day 3: Gear Ratios](./2023/Day3)
+- [Day 4: Scratchcards](./2023/Day4)
+- [Day 5: If You Give A Seed A Fertilizer](./2023/Day5)
+- [Day 6: Wait For It](./2023/Day6)
+- [Day 7: Camel Cards](./2023/Day7) - WIP
 - ...
 
 ## How to Run the Code
